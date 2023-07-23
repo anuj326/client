@@ -1,0 +1,23 @@
+body{
+    margin: 0%;
+    padding: 0%;
+ 
+}
+.msg{
+    position: relative;
+    top: 10px;
+}
+.title{
+    padding: 50px;
+    color: #ED5684;
+    font-family: 'Roboto Slab', serif;
+}
+div.gap-2 .btn {
+    color: #fff;
+    background-color: #ED5684;
+    margin-bottom: 10px;
+}
+label{
+    padding: 5px;
+    color: #111;
+}

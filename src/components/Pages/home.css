@@ -1,0 +1,24 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto Slab', serif;
+}
+
+.btn{
+    margin-left: 10px;
+}
+
+
+
+.sign a{
+    text-decoration: none;
+    color: green;
+}
+.sign a:hover{
+    color: white;
+}
+
+.bt a{
+    text-decoration: none;
+    color: white;
+}

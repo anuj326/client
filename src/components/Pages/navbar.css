@@ -1,0 +1,48 @@
+body{
+    font-family: 'Roboto Slab', serif;
+}
+.bottomnav {
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #5C636A;
+    overflow: hidden;
+    height: 40px;
+    padding: 5px;
+    
+}
+.icon{
+    margin-bottom: 50px;
+}
+.mb-3 {
+    margin-bottom: 2rem!important;
+}
+.nav-item a{
+    color: #111;
+    font-weight: 10px;
+    font-size: 20px;
+}
+.logo{
+    color: #BB2026;
+}
+.nav-item a:hover{
+    color: chocolate;
+    
+}
+.logo:hover{
+    color: chocolate;
+}
+div.bt .sign{
+    background-color: #5C636A;
+}
+.user-login{
+    color: #111;
+    font-size: 20px;
+    text-decoration: none;
+}
+.user-login:hover{
+    color: chocolate;
+}
+.gap-2{
+    margin: 5px;
+    gap: 0px!important;
+}

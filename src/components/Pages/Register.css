@@ -1,0 +1,16 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+.slogan{
+    margin: 10px;
+    color: #ED5684;
+    font-size: 30px;
+    font-family: 'Roboto Slab', serif;
+}
+.btl a{
+    text-decoration: none;
+    color: white;
+}
