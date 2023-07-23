@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate} from 'react-router-dom'
+import Swal from 'sweetalert2';
 require('./login.css')
 
 function Login() {
@@ -29,16 +30,26 @@ function Login() {
           "Content-Type":"application/json"
         },
         body:JSON.stringify(
-          { email, password  }
+          { email, password }
         )
       });
-      const data = res.json();
-     // console.log(data);
+      const data = await res.json();
+      console.log(data);
+      console.log(data.token);
       if(res.status == 400 || !data){
         window.alert('Invalid username or password')
       }else{
-        window.alert('Logged in Successfully')
-        history('/');
+        Swal.fire({
+          title: `Logged in Sucessfully!`,
+          icon: 'success',
+          showCloseButton: true
+          });
+        setTimeout(() => {
+          localStorage.setItem("token", data.token);
+           window.location = "/";	
+        }, 1000);
+       //window.alert('Logged in Successfully')
+       
       }
       
     }

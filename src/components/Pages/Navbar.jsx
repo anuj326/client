@@ -1,6 +1,7 @@
 import React , {useContext, useEffect, useState} from 'react'
 import {Link , useNavigate} from "react-router-dom";
 import {UserContext} from "../UserContext";
+import Swal from 'sweetalert2';
 require('./navbar.css')
 
 function Navbar() {
@@ -19,6 +20,15 @@ function Navbar() {
     });
   }, [setUserInfo]);
 
+  // const [authenticated, setauthenticated] = useState(null);
+
+  // useEffect(() => {
+
+  //   if (localStorage.getItem("token") !== null) {
+  //     setauthenticated(true);
+  //   }
+  // }, [authenticated]);
+
   function logout() {
     
     fetch('/logout', {
@@ -26,6 +36,12 @@ function Navbar() {
       method: 'POST',
     });
     setUserInfo(null);
+    localStorage.removeItem('token');
+    Swal.fire({
+      title: `Logged out Sucessfully!`,
+      icon: 'success',
+      showCloseButton: true
+      });
     
   }
 
@@ -89,10 +105,17 @@ const questionObject = {
           });
           const data = res.json();
           if(res.status == 422 || !data){
-            window.alert('Email already registered')
+            Swal.fire({
+              title: 'Question already exist',
+              icon: 'error',
+              showCloseButton: true
+            });
           }else{
-            window.alert('Quiz added successfully')
-            // history('/');
+            Swal.fire({
+              title: `Quiz created Sucessfully!`,
+              icon: 'success',
+              showCloseButton: true
+              });
           }
 
     // Clear the form inputs
