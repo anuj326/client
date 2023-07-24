@@ -24,7 +24,7 @@ function Login() {
     const loginUser = async(e)=>{
         e.preventDefault();
         const {email, password} =user;
-      const res = await fetch('https://server-nu-lyart.vercel.app/signin',{
+      const res = await fetch('server-nu-lyart.vercel.app/signin',{
         method:'POST',
         headers:{
           "Content-Type":"application/json"
