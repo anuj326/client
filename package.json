@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "server-nu-lyart.vercel.app/",
+  "proxy": "https://server-nu-lyart.vercel.app/",
   "dependencies": {
     "@chatscope/chat-ui-kit-react": "^1.10.1",
     "@testing-library/jest-dom": "^5.16.5",
